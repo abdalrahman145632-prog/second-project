@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Electronics Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+           
+            <a href="#home" class="logo">Electronics Store</a>
+
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="icon-btn" title="Toggle theme">⏾</button>
+                <button type="button" class="icon-btn cart-btn-icon" id="cart-btn" title="View Cart">
+                    🛒 <span class="cart-count">0</span>
+                </button>
+                <div class="cart-dropdown" id="cart-dropdown">
+                    <div class="cart-dropdown-header">
+                        <h3>Shopping Cart</h3>
+                        <button class="close-btn" id="close-cart">&times;</button>
+                    </div>
+
+                    <ul class="cart-items">
+                        <li class="cart-item">Your cart is empty.</li>
+                    </ul>
+
+                    <div class="cart-footer">
+                        <p class="cart-total">Total: $0.00</p>
+                        <button class="checkout-btn">Checkout</button>
+                    </div>
+                </div>
+                <button class="icon-btn" id="user-btn" title="Login">
+                    👤
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-text">
+                <span class="eyebrow">Built for the trade</span>
+                <h1>Discover Technology <span class="accent">That Moves You</span></h1>
+                <p>Here you will find the best devices at the best prices.</p>
+                <div class="hero-buttons">
+                    <a href="#shop" class="btn btn-primary">Shop all products</a>
+                    <a href="#about" class="btn btn-link">Learn more</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="main Pictuer.png" alt="Electronics products">
+            </div>
+        </section>
+
+
+        <section id="products" class="products-section">
+            <div class="product-header">
+                <div class="header-text">
+                    <span class="eyebrow" id="shop">TOP RATED DEVICES</span>
+                    <h2>Chosen by tech lovers.</h2>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search products...">
+                </div>
+            </div>
+            <div class="filter-button">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Smartphones</button>
+                <button class="filter-btn">Laptops</button>
+                <button class="filter-btn">Audio</button>
+            </div>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge">New</span>
+                        <img src="smart phone.png" alt="Product 1">
+                    </div>
+                    <div class="card-content">
+                        <span class="category-tag">Smartphones</span>
+                        <h3>Pro Smartphone 15</h3>
+                        <div class="ratting">★★★★★ 4.9</div>
+                        <div class="price">$899.99 </div>
+                        <button class="cart-btn" aria-label="Add to cart">🛒</button>
+
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge">Pro choice</span>
+                        <img src="laptop.png" alt="Product 2">
+                    </div>
+                    <div class="card-content">
+                        <span class="category-tag">Laptops</span>
+                        <h3>Pro Laptop 15</h3>
+                        <div class="ratting">★★★★★ 4.1</div>
+                        <div class="price">$1299.99 </div>
+                        <button class="cart-btn" aria-label="Add to cart">🛒</button>
+
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge">Best Seller</span>
+                        <img src="audui.png" alt="Product 3">
+                    </div>
+                    <div class="card-content">
+                        <span class="category-tag">Audio</span>
+                        <h3>Pro Audio Headphones</h3>
+                        <div class="ratting">★★★★★ 5.0</div>
+                        <div class="price">$199.99 </div>
+                        <button class="cart-btn" aria-label="Add to cart">🛒</button>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="admin" class="admin-section">
+
+            <div class="admin-header">
+                <h2>Admin Panel - Add New Product</h2>
+                <p>Add new electronics to the store catalog</p>
+            </div>
+
+            <form id="add-product-form" class="admin-form">
+                <div class="form-group">
+                    <label for="product-name">Product Name:</label>
+                    <input type="text" id="product-name" placeholder="e.g. Smart Watch Pro" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-category">Category:</label>
+                    <select id="product-category" required>
+                        <option value="Smartphones">Smartphones</option>
+                        <option value="Laptops">Laptops</option>
+                        <option value="Audio">Audio</option>
+                        <option value="Accessories">Accessories</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-price">Price ($):</label>
+                    <input type="number" id="product-price" placeholder="e.g. 299.99" step="0.01" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-image">Image URL:</label>
+                    <input type="text" id="product-image" placeholder="images/product-name.jpg" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Add Product</button>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <a href="#home" class="logo">Electronics Store</a>
+                </div>
+                <div class="footer-text">
+                    <p>Professional tech. Honest advice. Built for you.</p>
+                </div>
+                <div class="footer-copy">
+                    <p>&copy; 2026 Electronics Store Co.</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics.js";
+        import {
+            getAuth, signInWithPopup, signOut,
+            onAuthStateChanged, GoogleAuthProvider
+        } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAiyLL10keaBl-tznsR98NrnruxoNtOzmc",
+            authDomain: "my-abd-scenodproject-123.firebaseapp.com",
+            projectId: "my-abd-scenodproject-123",
+            storageBucket: "my-abd-scenodproject-123.firebasestorage.app",
+            messagingSenderId: "244613944037",
+            appId: "1:244613944037:web:d0cd1da15784ccd5323a0c",
+            measurementId: "G-3VW6G1RRC1"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth(app);
+        const provider = new GoogleAuthProvider();
+
+        const ADMIN_EMAIL = "sssabd80@gmail.com";
+
+        const loginBtn = document.getElementById("user-btn");
+        const adminSection = document.getElementById("admin");
+
+        loginBtn.addEventListener("click", async () => {
+            try {
+                if (auth.currentUser) {
+                    await signOut(auth);
+                } else {
+                    await signInWithPopup(auth, provider);
+                }
+            } catch (error) {
+                console.error(error);
+                alert("Something went wrong: " + error.message);
+            }
+
+        });
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                loginBtn.title = "Logout (" + user.displayName + ")";
+                loginBtn.innerHTML = `
+            <img src="${user.photoURL}" 
+            alt="User Profile"
+             class="user-profile-img">`;
+                adminSection.style.display = (user.email === ADMIN_EMAIL) ? "" : "none";
+            } else {
+                loginBtn.title = "Login";
+                loginBtn.textContent = "👤";
+                adminSection.style.display = "none";
+            }
+        });
+
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
